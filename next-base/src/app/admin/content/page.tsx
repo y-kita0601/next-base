@@ -13,8 +13,6 @@ export default async function Contents() {
 
     const response = await fetch('http://localhost:3000/api/contents');
     const notes = await response.json();
-    console.log(notes)
-    // console.log(response.json(),'response')
 
 
     return (
@@ -24,7 +22,7 @@ export default async function Contents() {
                 <Button>コンテンツ追加</Button>
             </div>
             <SimpleTable users={users}/>
-            <ContentDialog/>
+            <ContentDialog />
         </div>
     )
 }
